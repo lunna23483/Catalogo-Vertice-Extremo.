@@ -34,6 +34,14 @@
       .viewer{height:420px}
       header{flex-direction:column;align-items:flex-start}
     }
+    .insta-link{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+    }
+    .insta-link:hover{
+      text-decoration:underline;
+    }
   </style>
 </head>
 <body>
@@ -50,7 +58,7 @@
       <div class="controls">
         <a class="btn" href="CATALOGO.pdf" target="_blank" rel="noopener">Ver catálogo (abrir)</a>
         <a class="btn secondary" href="CATALOGO.pdf" download>Descargar catálogo</a>
-        <a class="btn secondary" href="https://api.whatsapp.com/send?text=Hola%20%F0%9F%91%8B%20te%20comparto%20nuestro%20cat%C3%A1logo%20en%20línea%3A%20https%3A%2F%2Flunna23483.github.io%2FCatalogo-Vertice-Extremo%2F%20" target="_blank">Compartir por WhatsApp</a>
+        <a class="btn secondary" href="https://api.whatsapp.com/send?text=Hola%20%F0%9F%91%8B%20te%20comparto%20nuestro%20cat%C3%A1logo%20en%20l%C3%ADnea%3A%20https%3A%2F%2Flunna23483.github.io%2FCatalogo-Vertice-Extremo%2F%20" target="_blank">Compartir por WhatsApp</a>
       </div>
 
       <div class="viewer" id="viewer">
@@ -61,9 +69,9 @@
 
       <div class="meta-row">
         <div class="qr-card">
-          <"verticeextremo">
           <div>
             <div style="font-weight:700">Síguenos en Instagram</div>
+            <a class="insta-link" href="https://www.instagram.com/verticeextremo/" target="_blank" rel="noopener">@verticeextremo</a>
           </div>
         </div>
 
@@ -72,7 +80,9 @@
         </div>
       </div>
 
-    
+    </div>
+  </div>
+
   <script>
     (function(){
       const d = new Date();
@@ -82,5 +92,7 @@
   </script>
 </body>
 </html>
+
+
 
 
