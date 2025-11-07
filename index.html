@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo - Vértice Extremo</title>
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#ffffff; --accent:#0f6ef0; --muted:#666;
+      --maxw:960px;
+    }
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg); margin:0; color:#222; -webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:var(--maxw); margin:32px auto; padding:24px;}
+    .card{background:var(--card); border-radius:12px; box-shadow:0 6px 18px rgba(20,20,30,0.06); padding:20px;}
+    header{display:flex; gap:16px; align-items:center; margin-bottom:16px;}
+    .logo{width:72px; height:72px; border-radius:8px; background:#1111; display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{font-size:20px;margin:0}
+    p.lead{color:var(--muted); margin:6px 0 0 0}
+    .controls{display:flex; gap:8px; margin:16px 0; flex-wrap:wrap}
+    .btn{
+      display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;
+      border:1px solid transparent;background:var(--accent);color:#fff;
+    }
+    .btn.secondary{background:transparent;color:var(--accent);border-color:rgba(15,110,240,0.15)}
+    .viewer{width:100%; height:560px; border-radius:8px; overflow:hidden; border:1px solid #eee}
+    .meta-row{display:flex; gap:12px; align-items:center; margin-top:14px; flex-wrap:wrap}
+    .qr-card{display:flex; gap:12px; align-items:center; padding:10px; border-radius:8px; border:1px dashed #eee}
+    .qr-card img{width:110px;height:110px; object-fit:contain; background:#fff; padding:6px; border-radius:8px}
+    footer{margin-top:12px;color:var(--muted); font-size:13px}
+    @media (max-width:600px){
+      .viewer{height:420px}
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="logo">VE</div>
+        <div>
+          <h1>Catálogo Vértice Extremo</h1>
+          <p class="lead">Catálogo digital — descarga o visualiza en línea. Síguenos en Instagram</p>
+        </div>
+      </header>
+
+      <div class="controls">
+        <a class="btn" href="CATALOGO.pdf" target="_blank" rel="noopener">Ver catálogo (abrir)</a>
+        <a class="btn secondary" href="CATALOGO.pdf" download>Descargar catálogo</a>
+        <a class="btn secondary" href="https://api.whatsapp.com/send?text=Hola%20%F0%9F%91%8B%20te%20comparto%20nuestro%20cat%C3%A1logo%20en%20línea%3A%20https%3A%2F%2Flunna23483.github.io%2FCatalogo-Vertice-Extremo%2F%20" target="_blank">Compartir por WhatsApp</a>
+      </div>
+
+      <div class="viewer" id="viewer">
+        <iframe src="CATALOGO.pdf" style="width:100%;height:100%;border:0" title="Visor del catálogo">
+          <p>Tu navegador no soporta ver PDFs en línea. Haz clic <a href="CATALOGO.pdf">aquí para descargar</a>.</p>
+        </iframe>
+      </div>
+
+      <div class="meta-row">
+        <div class="qr-card">
+          <"verticeextremo">
+          <div>
+            <div style="font-weight:700">Síguenos en Instagram</div>
+          </div>
+        </div>
+
+        <div style="margin-left:auto; color:var(--muted); font-size:13px">
+          Última actualización: <span id="updated">—</span>
+        </div>
+      </div>
+
+    
+  <script>
+    (function(){
+      const d = new Date();
+      const dd = d.toLocaleDateString('es-CO', {year:'numeric', month:'short', day:'numeric'});
+      document.getElementById('updated').textContent = dd;
+    })();
+  </script>
+</body>
+</html>
+
+
